@@ -1,16 +1,24 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: #CBD5E0;
+}
+::-webkit-scrollbar-thumb{
+    background: #2D3748;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #718096;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.tooltip .tooltip-text {
+  @apply invisible p-4 absolute z-50 rounded-lg text-white border-2 border-green-200;
 }
 
-* {
-  box-sizing: border-box;
+.tooltip:hover .tooltip-text {
+  @apply visible;
 }
