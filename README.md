@@ -3,12 +3,12 @@
 a revamp of my personal website with next.js SSG and tailwind css
 
 ## Available Scripts
-- `npm start`
+- `npm run dev`
     - open the dev server
-- `npm build`
+- `npm run build`
     - to build the project with next.js ssg
-- `npm start`
-- `npm lint`
+- `npm run start`
+- `npm run lint`
 
 ## Using Library
 - Next.js

@@ -17,7 +17,7 @@ const ProjectCard = (props) => {
     <div className="max-w-xs w-full">
 
       <div className="flex items-center justify-center h-56 bg-white overflow-hidden rounded-t-xl shadow-lg relative">
-				<Image className="object-cover" src={props?.detail?.img} alt="project image" layout="fill" objectFit="cover"/>
+				<Image className="object-cover" src={props?.detail?.img} alt="project image" layout="fill" objectFit="cover" priority="true"/>
       </div>
 
       <div className="block bg-gray-200 overflow-hidden rounded-b-xl h-56">
