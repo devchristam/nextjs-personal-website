@@ -9,7 +9,7 @@ const SelfIntro = () => {
 
 					{/* class relative is required for next js image */}
           <div className="flex items-end justify-center mt-16 relative">
-						<Image className="rounded-full" src="/image/avatar_small.jpg" alt="avatar" width={320} height={320} property="true"/>
+						<Image className="rounded-full" src="/image/avatar_small.jpg" alt="avatar" width={320} height={320} priority="true"/>
           </div>
         </div>
       </div>
