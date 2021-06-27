@@ -26,8 +26,8 @@ const Project = () => {
               title: "Personal website",
               img: "/image/proj3.jpg",
               content: "A personal website to introduce myself",
-              tech: ["React", "TailwindCSS"],
-              url: "https://github.com/devchristam/my-personnel-website"
+              tech: ["React", "TailwindCSS", "Next.js"],
+              url: "https://github.com/devchristam/nextjs-personal-website"
             }}/>
           </div>
         </div>
