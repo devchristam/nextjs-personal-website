@@ -1,19 +1,20 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { Spinner } from './components/Spinner'
+import Spinner from './components/Spinner'
 
-export default function Home() {
-  const LazyloadApp = dynamic(
-    () => import('./components/App'),
-    {
-      loading: () => {
-        return (
-          <Spinner/>
-        )
-      }
-    }
-  )
+const LazyloadApp = dynamic(
+  () => import('./components/App'),
+  { 
+    loading: function SpinLoader() {
+      return (
+        <Spinner/> 
+      );
+    }, 
+    ssr: false
+  }
+)
 
+function Home() {
   return (
     <div>
       <Head>
@@ -35,3 +36,4 @@ export default function Home() {
     </div>
   )
 }
+export default Home
