@@ -1,8 +1,19 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import App from './components/App'
+import dynamic from 'next/dynamic'
+import { Spinner } from './components/Spinner'
 
 export default function Home() {
+  const LazyloadApp = dynamic(
+    () => import('./components/App'),
+    {
+      loading: () => {
+        return (
+          <Spinner/>
+        )
+      }
+    }
+  )
+
   return (
     <div>
       <Head>
@@ -20,7 +31,7 @@ export default function Home() {
 				<meta property="twitter:title" content="Chris Tam" />
 				<meta property="twitter:description" content="Chris Tam personal website" />
       </Head>
-			<App/>
+      <LazyloadApp/>
     </div>
   )
 }
